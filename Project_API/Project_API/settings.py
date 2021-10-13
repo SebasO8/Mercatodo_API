@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'Project_API.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST': 'byloqejpam5iu1lddnk6-mysql.services.clever-cloud.com',
+        'HOST': config('HOST'),
         'PORT': '3306', 
         'USER': 'ubb228cazupweogw', 
         'PASSWORD': 'dE1XvTe8vcYLoUEKSEHE', 
