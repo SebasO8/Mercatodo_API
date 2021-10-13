@@ -62,7 +62,7 @@ _**Nota:** los comandos se ejecutaron el intérprete de comando de Windows, (en 
 9- Configurar MySQL con Django:
 
 - Project_API> pip install mysqlclient
-- **Nota:** Se debe crear la db (moviedb) en el gestor de base de datos de mysql
+- **Nota:** Se debe crear la db (mercatodo) en el gestor de base de datos de mysql
 
 10- Ejecutar las migraciones para que se aplique en la base de datos:
 
