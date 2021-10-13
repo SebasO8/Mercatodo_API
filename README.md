@@ -52,25 +52,25 @@ _**Nota:** los comandos se ejecutaron el intérprete de comando de Windows, (en 
 
 7- Crea una nueva aplicación en django:
 
-- master-class-django> cd videoclub
-- videoclub> python manage.py startapp movie
+- Mercatodo_API> cd Project_API
+- Project_API> python manage.py startapp api
 
 8- Inicializar el servidor de desarrollo:
 
-- videoclub> python manage.py runserver
+- Project_API> python manage.py runserver
 
 9- Configurar MySQL con Django:
 
-- videoclub> pip install mysqlclient
+- Project_API> pip install mysqlclient
 - **Nota:** Se debe crear la db (moviedb) en el gestor de base de datos de mysql
 
 10- Ejecutar las migraciones para que se aplique en la base de datos:
 
-- videoclub> python manage.py migrate
+- Project_API> python manage.py migrate
 
 11- Creación del súper usuario:
 
-- videoclub> python manage.py createsuperuser
+- Project_API> python manage.py createsuperuser
 - Nombre de usuario (leave blank to use 'xxxxxxx'): admin
 - Dirección de correo electrónico: xxxxxxa@hotmail.com
 - Password:
@@ -79,19 +79,19 @@ _**Nota:** los comandos se ejecutaron el intérprete de comando de Windows, (en 
 
 12- Inicializar el servidor de desarrollo:
 
-- videoclub> python manage.py runserver
+- Project_API> python manage.py runserver
 
 13- Aplicamos la migración de los modelos _(Crea el archivo de migración )_:
 
-- videoclub> python manage.py makemigrations
+- Project_API> python manage.py makemigrations
 
 14- Ejecutar las migraciones para que se aplique en la base de datos:
 
-- videoclub> python manage.py migrate:
+- Project_API> python manage.py migrate:
 
 15- creación de un archivo requirements.txt
 
-- videoclub> pip freeze > requirements\requirements.txt
+- Project_API> pip freeze > requirements\requirements.txt
 
 ## Despliegue 📦
 
