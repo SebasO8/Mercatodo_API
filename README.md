@@ -24,16 +24,16 @@ _**Nota:** los comandos se ejecutaron el intérprete de comando de Windows, (en 
 
 1- Crear la carpeta para instalar el entorno virtual:
 
-- Projects> mkdir master-class-django
-- Projects> cd master-class-django
+- Projects> mkdir Mercatodo_API
+- Projects> cd Mercatodo_API
 
 2- Instalamos el entorno virtual:
 
-- master-class-django> python -m venv venv
+- Mercatodo_API> python -m venv venv
 
 3- Activar el entorno virtual:
 
-- master-class-django> cd venv\Scripts\activate
+- Mercatodo_API> cd venv\Scripts\activate
 - Comando para activar el venv: activate
 - Comando para desactivar el venv: deactivate
 
@@ -48,7 +48,7 @@ _**Nota:** los comandos se ejecutaron el intérprete de comando de Windows, (en 
 6- Crea un nuevo proyecto en django:
 
 - Scripts> cd ../../
-- master-class-django> django-admin startproject Project_API
+- Mercatodo_API> django-admin startproject Project_API
 
 7- Crea una nueva aplicación en django:
 
