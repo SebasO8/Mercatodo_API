@@ -22,10 +22,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = 'django-insecure-c2=+l$m#ui7@6dchfj9-e(9_d^e&jf0vleuwi&!4l-7x1guu__'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -58,6 +58,7 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_WHITELIST=(
     'http://localhost:3000',
+    'https://mercatodo-crud.netlify.app',
 )
 
 ROOT_URLCONF = 'Project_API.urls'
@@ -86,12 +87,12 @@ WSGI_APPLICATION = 'Project_API.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': config('ENGINE'),
-        'HOST': config('HOST'),
-        'PORT': config('PORT'), 
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST': 'byloqejpam5iu1lddnk6-mysql.services.clever-cloud.com',
+        'PORT': '3306', 
         'USER': 'ubb228cazupweogw', 
-        'PASSWORD': config('PASSWORD'), 
-        'NAME': config('NAME'),   
+        'PASSWORD': 'dE1XvTe8vcYLoUEKSEHE', 
+        'NAME': 'byloqejpam5iu1lddnk6',   
     }
 }
 
