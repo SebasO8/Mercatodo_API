@@ -118,6 +118,6 @@ _Las herramientas utilizadas para este proyecto fueron:_
 ## Expresiones de Gratitud 🎁
 
 - Fundación educamás – Prográmate (bootcamp).
-- Formadores y Coformadores - Prográmate (bootcamp).
+- Formadores y Co formadores - Prográmate (bootcamp).
 - Simplon.co Grand Ouest.
 - A todos los compañeros del bootcamp.
