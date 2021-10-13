@@ -89,9 +89,9 @@ class Products(models.Model):
     prod_description = models.CharField(max_length=100)
     prod_unit_price = models.DecimalField(max_digits=14, decimal_places=2)
     prod_stock = models.PositiveIntegerField()
-    cat = models.ForeignKey(Categories, models.DO_NOTHING)
-    prov = models.ForeignKey('Provider', models.DO_NOTHING)
-    prod_datetime_ingress = models.DateTimeField()
+    cat = models.ForeignKey(Categories, models.DO_NOTHING, blank=True, null=True)
+    prov = models.ForeignKey('Provider', models.DO_NOTHING, blank=True, null=True)
+    prod_datetime_ingress = models.DateTimeField(blank=True, null=True)
 
     class Meta:
         managed = True

@@ -6,6 +6,8 @@ from django.utils.decorators import method_decorator
 from django.views import View
 from django.views.decorators.csrf import csrf_exempt
 from .models import Products
+from .models import Categories
+from .models import Provider
 import json
 
 
@@ -38,7 +40,7 @@ class ProductsView(View):
     #print(request.body)
     jd=json.loads(request.body)
     #print(jd)
-    Products.objects.create(prod_description=jd['prod_description'], prod_unit_price=jd['prod_unit_price'], prod_stock=jd['prod_stock'], cat_id=jd['cat_id'], prov_id=jd['prov_id'], prod_datetime_ingress=jd['prod_datetime_ingress'] )
+    Products.objects.create(prod_description=jd['prod_description'], prod_unit_price=jd['prod_unit_price'], prod_stock=jd['prod_stock'])
     data={'message':'Succes'}
     return JsonResponse(data)
 
@@ -50,9 +52,9 @@ class ProductsView(View):
       product.prod_description=jd['prod_description']
       product.prod_unit_price=jd['prod_unit_price']
       product.prod_stock=jd['prod_stock']
-      product.cat_id=jd['cat_id']
-      product.prov_id=jd['prov_id']
-      product.prod_datetime_ingress=jd['prod_datetime_ingress']
+      # product.cat_id=jd['cat_id']
+      # product.prov_id=jd['prov_id']
+      # product.prod_datetime_ingress=jd['prod_datetime_ingress']
       product.save()
       data={'message':'Succes'}
     else:
@@ -69,3 +71,22 @@ class ProductsView(View):
     else:
       data={'message':'Product not found...'}
     return JsonResponse(data)
+
+class CategoriesView(View):
+  def get(self, request,):
+    categoriesList = list(Categories.objects.values())
+    if len(categoriesList) > 0:
+      data={'message':'Succes', 'categories':categoriesList}
+    else:
+      data={'message':'Categories not found...'}
+    return JsonResponse(data)
+
+class ProviderView(View):
+  def get(self, request,):
+    providerList = list(Provider.objects.values())
+    if len(providerList) > 0:
+      data={'message':'Succes', 'Providers':providerList}
+    else:
+      data={'message':'Providers not found...'}
+    return JsonResponse(data)
+
